@@ -12,6 +12,7 @@ async function getRandomTrack() {
     const trackName = `${response2.data.tracks.track[randomNumber2].name}`
     const trackArtist = `${response2.data.tracks.track[randomNumber2].artist.name}`
     document.querySelector('#content>h2').textContent = `${trackName} by ${trackArtist}`
+    document.querySelector('#content>h3').textContent = `Genre: ${genre}`
 }
 
 document.querySelector('button').addEventListener('click', () => {
