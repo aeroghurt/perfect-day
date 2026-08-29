@@ -10,4 +10,10 @@ async function getRandomGenre() {
     console.log(genre)
 }
 
+async function getRandomTrack(genre) {
+    let randomNumber = Math.floor(Math.random() * 1000);
+    const response = await axios.get(`https://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=${genre}&api_key=1ab15445a60aeb6ac38fa4a58d776a53&limit=1000&format=json`);
+    const trackName = response.data.tracks.track[randomNumber].name
+    const trackArtist = response.data.tracks.track[randomNumber].artist.name
+}
 getRandomGenre();
