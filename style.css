@@ -54,6 +54,7 @@ body {
 
 #yap > h2, #yap > h1 {
     padding-left: 1%;
+    background-color: white;
 }
 
 #content {
